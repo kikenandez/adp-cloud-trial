@@ -13,6 +13,15 @@ class TestTally(unittest.TestCase):
     def test_empty(self) -> None:
         self.assertEqual(count_words("  "), {})
 
+    def test_skips_digits_only_tokens(self) -> None:
+        self.assertEqual(
+            set(count_words("in 2026 we had 42 cats")),
+            {"in", "we", "had", "cats"},
+        )
+
+    def test_keeps_mixed_alphanumeric_tokens(self) -> None:
+        self.assertEqual(count_words("mp3 42."), {"mp3": 1})
+
     def test_top_words_orders_by_frequency(self) -> None:
         self.assertEqual(
             top_words("b a b c b a", 2), [("b", 3), ("a", 2)]

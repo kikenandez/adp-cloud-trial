@@ -5,7 +5,7 @@ def count_words(text: str) -> dict[str, int]:
     counts: dict[str, int] = {}
     for word in text.lower().split():
         word = word.strip(".,;:!?\"'()")
-        if word:
+        if word and not word.isdigit():
             counts[word] = counts.get(word, 0) + 1
     return counts
 
