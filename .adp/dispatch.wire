@@ -1,0 +1,21 @@
+; ADP dispatch — wire v1.1 (auto-synced from docs/tasks/current.md)
+v 1.1
+upd 2026-11-04T00:25Z by=wire-sync
+
+dev
+ take T1 — top-N words
+ next T2
+ no   —
+ cap  end session at ≤30% remaining
+ rem  Gate 0 on every bug. Stage by exact path; git status --short before every commit
+
+des
+ take no pickup pending
+ next —
+ cap  end session at ≤30% remaining
+ rem  Preserve load-bearing test selectors. New i18n strings land in all locales in th
+
+rev
+
+usr
+ - (list items only the human can do: domain registration, console toggles, manual deploys, e
